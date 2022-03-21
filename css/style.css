@@ -1,0 +1,226 @@
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+
+body {
+	background:url('../image/Sims\ blend\ bg.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+	line-height: 1.5;
+}
+
+/* Container */
+
+.container {
+	width: 80%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+	padding: 0 24px;
+}
+
+/* Heading */
+
+h1 {
+	text-align: center;
+	margin: 40px 0px;
+	font-size: 40px;
+	font-family: 'Roboto', sans-serif;
+	color: aliceblue;	
+}
+
+h2 {
+	text-align: center;
+	margin-top: 60px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	color: black;
+}
+
+/* Font */
+
+.fontType {
+	padding: 8px;
+	margin: 10px 0;
+	width: 15%;	
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fontSize {
+	padding: 8px;
+	margin: 10px 0;
+	width: 7%;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button */
+
+.buttonStyle {
+	margin: 10px 2px;
+	padding: 8px;
+	width: 36px;
+	height: 36px;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: black;
+	cursor: pointer;
+	font-size: 16px;
+	font-family:'Courier New', Courier, monospace;	
+}
+
+.buttonStyle:hover {
+	background-color: #FA8072;
+	color: white;
+	transition: 0.5s;
+}
+
+input[type=reset] {
+	padding: 10px;
+	width: 60px;
+	height: 40px;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: black;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px 5px;
+}
+
+.btnClear:hover {
+	background-color: #d34839;
+	color: white;
+	transition: 0.5s;
+}
+
+#saveNote {
+	padding: 10px;
+	width: 60px;
+	height: 40px;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: black;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px 5px;
+}
+
+#saveNote:hover {
+	background-color: #39d36c;
+	color: white;
+	transition: 0.5s;
+}
+
+#deleteNote {
+	padding: 10px;
+	width: 66px;
+	height: 40px;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: black;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px 5px;
+	background-color: #d34839;
+}
+
+/* Text Area */
+
+.noteWrap {
+	margin: 5px 0;
+	padding: 8px 0;
+}
+
+#noteTitle, #noteContent {
+	width: 100%;
+	border: 2px solid #00000033;
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 8px;	
+}
+
+#noteTitle {
+	margin-bottom: 10px;
+}
+
+#noteContent {
+	resize: none;
+	height: 200px;	
+}
+
+#noteTitle:focus, #noteContent:focus {
+	outline:  0;
+}
+
+/* Saved Notes Area */
+
+.noteList {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 30px;
+	border: 2px solid #00000033;
+	border-radius: 5px;
+}
+
+.noteItem {
+	margin: 16px;
+	padding: 24px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
+}
+
+.noteItem h3 {
+	margin-bottom: 16px;
+}
+
+.noteItem p {
+	padding-bottom: 12px;
+}
+
+.noteItem #deleteNote {
+	margin-top: 12px;
+}
+
+#deleteNote:hover {
+	background-color: white;
+	color: black;
+	border: 2px solid #d34839;
+	transition: 0.5s;
+}
+
+/* Warnings */
+
+.warning {
+	border-color: #ff6f59cc !important;
+}
+
+/* Media Queries */
+
+@media (min-width: 992px) {
+	.noteList {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

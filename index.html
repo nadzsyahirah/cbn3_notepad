@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>nadzsyahirah's Notepad</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="load_text()">
+
+	<!-- Header -->
+	<div class="container">
+		<h1>NSZ Notepad</h1>
+	</div>
+
+	<div class="container">
+				
+		<!-- Fonts -->
+		<select name="fontType" class="fontType" onchange="changeFont(this)">
+			<option selected>Fonts</option>
+			<option value="Arial">Arial</option>
+			<option value="Cambria">Cambria</option>
+			<option value="Comic Sans MS">Comic Sans MS</option>
+			<option value="Courier New">Courier New</option>
+			<option value="Garamond">Garamond</option>
+			<option value="Georgia">Georgia</option>
+			<option value="Impact">Impact</option>
+			<option value="Lucida Sans">Lucida Sans</option>
+			<option value="Times New Roman">Times New Roman</option>				
+			<option value="Verdana">Verdana</option>	
+		</select>
+			
+		<!-- Font Size -->
+		<select name="fontSize" class="fontSize" onchange="changeSize(this)">
+			<option>10</option>
+			<option>12</option>
+			<option>14</option>
+			<option>16</option>
+			<option>18</option>
+			<option>20</option>
+			<option>22</option>
+			<option>24</option>
+			<option>26</option>
+			<option>28</option>
+			<option>30</option>
+			<option>40</option>
+			<option>50</option>
+		</select>
+
+		<!-- Style Buttons -->
+		<input type="button" class="buttonStyle" value="B" style="font-weight: bold;" onclick="bold_click()">
+		
+		<input type="button" class="buttonStyle" value="I" style="font-family:courier; font-style: italic;" onclick="italic_click()">
+
+		<input type="button" class="buttonStyle" value="U" style="text-decoration: underline" onclick="underline_click()">
+
+		<input type="button" class="buttonStyle" value="N" onclick="normal_click()">
+
+		<!-- Note Title Text -->
+		<div class="noteWrap">
+			<input type="text" id="noteTitle" placeholder="Title">
+
+			<!-- Text Area -->
+			<textarea id="noteContent" rows="10" placeholder="Note"></textarea>
+		</div>
+		
+		<!-- Clear Button -->			
+		<input type="reset" value="Clear" class="btnClear" onclick="clear_click()">
+
+		<!-- Save Button -->
+		<button id="saveNote" type="button">Save</button>
+	</div>
+
+	<!-- Saved Notes Area -->
+	<div class="container">
+		<h2>Saved Notes</h2>
+		<div class="noteList">
+				<!-- 
+				<div class="noteItem">
+					<h3>Title</h3>
+					<p>Notes</p>
+				
+				<button id="deleteNote" type="button">Delete</button>
+				</div>	-->
+		</div>
+	</div>
+
+	<script src="javascript/script.js"></script>
+</body>
+</html>
